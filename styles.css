@@ -1,16 +1,42 @@
-body {
-    background-color: #1D4221;
-    color: white;
-    font-family: "Bai Jamjuree", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 700px;
-    margin: 0;
+/* Configuração de classes personalizadas para usar a fonte Chakra Petch */
+.font-chakra {
+    font-family: "Chakra Petch", sans-serif;
 }
 
-button {
-    background-color: #64A712;
-    color: white;
-    font-family: "Bai Jamjuree", sans-serif;
+/* Estilo para garantir que o iframe seja responsivo */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 560px;
+    /* Largura máxima do iframe */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+
+/* Estilo para o scrollbar das categorias, inspirado na Barbie */
+.categoria-videos::-webkit-scrollbar {
+    height: 8px;
+}
+
+.categoria-videos::-webkit-scrollbar-track {
+    background: #fbcfe8;
+    /* Pista rosa claro */
+    border-radius: 10px;
+}
+
+.categoria-videos::-webkit-scrollbar-thumb {
+    background: #ec4899;
+    /* Puxador rosa forte */
+    border-radius: 10px;
 }

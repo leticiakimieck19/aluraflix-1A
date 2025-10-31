@@ -1,28 +1,99 @@
 ALURAFLIX
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Barbieflix</title>
+    <!-- Referência ao arquivo de estilos CSS externo -->
+    <link rel="stylesheet" href="styles.css"> 
+    <!-- Carregando Tailwind CSS para styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <title>Em busca da cidade perdida</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
-<body>
-    <main>
-        <div class="passo ativo" id="passo-0">
-            <p>Um dia desses, dentro de um livro da biblioteca da escola, eu descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
-            <button class="btn-proximo" data-proximo="1">Rio de Janeiro</button>
-            <button class="btn-proximo" data-proximo="2">Pernambuco</button>
+
+<body class="bg-black text-white m-0 p-0 pb-24 font-chakra">
+
+    <!-- CABEÇALHO -->
+    <header class="border-b-4 border-pink-500 p-5 text-4xl text-pink-500 font-bold text-center">
+        BARBIEFLIX
+    </header>
+
+    <!-- SEÇÃO DE CHAMADA PRINCIPAL (DESTAQUE) -->
+    <section class="bg-pink-300/30 p-8 md:p-20 flex flex-col md:flex-row justify-center items-center flex-wrap gap-8">
+        
+        <!-- Texto de Chamada -->
+        <div class="text-center md:text-left max-w-lg md:mr-12">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-pink-800 uppercase leading-tight">
+                BARBIE O FILME
+            </h1>
+            <p class="text-xl sm:text-2xl text-pink-600 font-semibold mt-4 tracking-wider">
+                #sonho-rosa #barbieland
+            </p>
         </div>
-        <div class="passo" id="passo-1">
-            <p>Você começa sua jornada no Rio de Janeiro, subindo o Pico da Tijuca ao amanhecer para encontrar a primeira pista.</p>
-            <button class="btn-proximo" data-proximo="3">Procurar a pista no topo do pico</button>
-            <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
+
+        <!-- Vídeo de Chamada (Trailer) -->
+        <div class="video-container shadow-2xl shadow-pink-500/50 rounded-lg">
+            <!-- Trailer Oficial do Filme Barbie (2023) -->
+            <iframe
+                src="https://www.youtube.com/embed/pBk42G1_80o?si=EEv-tsY_b1B2OwKE&autoplay=0&mute=1"
+                title="YouTube video player - Barbie Official Trailer" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-    </main>
-    <script src="script.js"></script>
+    </section>
+
+    <!-- SEÇÃO DE CATEGORIA - FILMES E SÉRIES -->
+    <section class="p-4 md:px-8 mt-12">
+        <h2 class="text-3xl font-bold mb-6 text-pink-500 border-l-4 border-pink-500 pl-3">
+            A Magia dos Filmes Clássicos
+        </h2>
+        
+        <!-- Carrossel de Vídeos -->
+        <div class="categoria-videos flex overflow-x-auto gap-4 pb-4">
+            
+            <!-- Item 1: Barbie e o Castelo de Diamante -->
+            <a href="https://www.youtube.com/watch?v=k1Yq2vXvL_Q" class="group flex-shrink-0">
+                <img src="https://img.youtube.com/vi/k1Yq2vXvL_Q/maxresdefault.jpg" alt="Barbie e o Castelo de Diamante"
+                    class="h-52 w-80 object-cover rounded-xl opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:border-4 group-hover:border-pink-500 shadow-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/320x208/D81B60/ffffff?text=Castelo+Diamante';" />
+            </a>
+            
+            <!-- Item 2: Barbie Escola de Princesas -->
+            <a href="https://www.youtube.com/watch?v=F1l21qE72D0" class="group flex-shrink-0">
+                <img src="https://img.youtube.com/vi/F1l21qE72D0/maxresdefault.jpg" alt="Barbie Escola de Princesas"
+                    class="h-52 w-80 object-cover rounded-xl opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:border-4 group-hover:border-pink-500 shadow-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/320x208/D81B60/ffffff?text=Escola+Princesas';" />
+            </a>
+            
+            <!-- Item 3: Barbie A Princesa e a Popstar -->
+            <a href="https://www.youtube.com/watch?v=e5h5_c-4GzE" class="group flex-shrink-0">
+                <img src="https://img.youtube.com/vi/e5h5_c-4GzE/maxresdefault.jpg" alt="Barbie A Princesa e a Popstar"
+                    class="h-52 w-80 object-cover rounded-xl opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:border-4 group-hover:border-pink-500 shadow-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/320x208/D81B60/ffffff?text=Princesa+Popstar';" />
+            </a>
+            
+            <!-- Item 4: Barbie e as 12 Princesas Bailarinas -->
+            <a href="https://www.youtube.com/watch?v=j3c0-6wz0Wk" class="group flex-shrink-0">
+                <img src="https://img.youtube.com/vi/j3c0-6wz0Wk/maxresdefault.jpg" alt="Barbie e as 12 Princesas Bailarinas"
+                    class="h-52 w-80 object-cover rounded-xl opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:border-4 group-hover:border-pink-500 shadow-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/320x208/D81B60/ffffff?text=12+Bailarinas';" />
+            </a>
+            
+            <!-- Item 5: Barbie Fairytopia -->
+            <a href="https://www.youtube.com/watch?v=wzD969g8L-I" class="group flex-shrink-0">
+                <img src="https://img.youtube.com/vi/wzD969g8L-I/maxresdefault.jpg" alt="Barbie Fairytopia"
+                    class="h-52 w-80 object-cover rounded-xl opacity-75 transition-all duration-300 group-hover:opacity-100 group-hover:border-4 group-hover:border-pink-500 shadow-lg"
+                    onerror="this.onerror=null;this.src='https://placehold.co/320x208/D81B60/ffffff?text=Fairytopia';" />
+            </a>
+            
+        </div>
+    </section>
 </body>
 </html>
